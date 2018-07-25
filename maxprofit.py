@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Jul 24 22:27:19 2018
 
-@author: aditya
-"""
 '''
 Input: [7,1,5,3,6,4]
 Output: 5
