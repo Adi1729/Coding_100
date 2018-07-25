@@ -2,7 +2,8 @@
 Coding Practice Python
 
 This is an exercise to practice different coding problems from easy to intermediate level.
-Language used : Python
+
+_Language used : Python_
 
 Algorithms covered :
 1. DP
