@@ -1,5 +1,4 @@
 # Coding_100
-Coding Practice Python
 
 This is an exercise to practice  100 different coding problems from easy to intermediate level.
 
