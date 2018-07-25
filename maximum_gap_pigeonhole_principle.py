@@ -1,13 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Spyder Editor
 
-This is a temporary script file.
-"""
-"""
-:type nums: List[int]
-:rtype: int
-"""
 
 
 nums =[1,2,3,4,7,12]
