@@ -23,40 +23,31 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 class Solution(object):
     
     def maxProfit(self, prices):
+        
         """
         :type prices: List[int]
         :rtype: int
         """
         
-        if len(prices)==0:
-            return 0
-
         
-        def cal_pr(prices):
-
-            max_profit=0
-            min_price=float('inf')
-            i=0
-            while(i<len(prices)):
-
-                if(prices[i]<min_price):
-                    min_price=prices[i]
-                elif(prices[i]-min_price>max_profit):
-                    max_profit=prices[i]-min_price
-
-                i=i+1
-
-            return max_profit
-
-
-        left_profit_list=[]
-        right_profit_list=[]
-        profit=[]
+        
+        left_profit_list,right_profit_list=[],[]
+        profit=0
+        min_price,left_profit,max_price,right_profit=float('inf'),0,0,0
+        
 
         for i in range(0,len(prices)):
-            left_profit=cal_pr(prices[0:i])
-            right_profit=cal_pr(prices[i:])
-            profit.append(left_profit+right_profit)
-
-
-        return max(profit)
+            
+            min_price=min(prices[i],min_price)
+            left_profit=max(left_profit,prices[i]-min_price)
+            left_profit_list.append(left_profit)
+            
+        for i in reversed(range(0,len(prices))):
+            max_price=max(prices[i],max_price)
+            right_profit=max(right_profit,max_price-prices[i])
+            right_profit_list.insert(0,right_profit)
+            
+        for i in range(0,len(prices)):
+            profit=max(profit,right_profit_list[i]+left_profit_list[i])
+        
+        return profit
