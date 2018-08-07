@@ -51,3 +51,27 @@ class Solution(object):
            
 
         return (decode_s[K-1])
+
+       
+       '''
+       
+       
+str_=""    
+str_list=[]
+while(index<len(S)-1):
+    if S[index].isdigit():
+        if (str_!=""):
+            str_list.append(str_)
+        str_ = ""
+        if (S[index+1].isalpha() or (index == len(S)-1)):
+            num_list.append(p*int(S[index]))
+            p=1
+        else:
+            p=p * int(S[index])
+    else:
+        str_ = str_ + S[index]
+        
+    index= index +1
+    
+S= S[0:len(S)-1]
+'''
