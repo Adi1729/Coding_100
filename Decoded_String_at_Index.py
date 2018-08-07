@@ -27,3 +27,27 @@ Output: "a"
 Explanation: 
 The decoded string is "a" repeated 8301530446056247680 times.  The 1st letter is "a".
 '''
+
+class Solution(object):
+    def decodeAtIndex(self, S, K):
+        """
+        :type S: str
+        :type K: int
+        :rtype: str
+        """
+
+        decode_s=""
+
+        i=0
+        index=0
+        
+        while(i<K):
+            if S[index].isdigit():
+                decode_s = decode_s * int(S[index])
+            else:
+                decode_s = decode_s + S[index]
+            index = index + 1    
+            i=len(decode_s)
+           
+
+        return (decode_s[K-1])
