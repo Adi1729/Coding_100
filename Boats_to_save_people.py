@@ -24,3 +24,26 @@ Output: 4
 Explanation: 4 boats (3), (3), (4), (5)
 
 '''
+
+
+class Solution(object):
+    def numRescueBoats(self, people, limit):
+        """
+        :type people: List[int]
+        :type limit: int
+        :rtype: int
+        """
+        people = sorted(people)
+        light = 0
+        heavy = len(people)-1
+        counter =0
+        while(light<=heavy):
+            counter = counter +1
+            if (people[light]+people[heavy])<=limit:
+                light = light +1
+            heavy = heavy - 1
+
+            
+        return counter
+       
+       
