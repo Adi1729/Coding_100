@@ -8,3 +8,6 @@ Algorithms covered :
 1. DP
 2. Pigeonhole
 3. Directed Acyclic Graph
+
+
+<img src="https://github.com/Adi1729/Coding_100/blob/master/Coding.gif">
