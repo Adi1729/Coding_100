@@ -51,27 +51,32 @@ class Solution(object):
            
 
         return (decode_s[K-1])
-
-       
-       '''
-       
-       
-str_=""    
-str_list=[]
-while(index<len(S)-1):
-    if S[index].isdigit():
-        if (str_!=""):
-            str_list.append(str_)
-        str_ = ""
-        if (S[index+1].isalpha() or (index == len(S)-1)):
-            num_list.append(p*int(S[index]))
-            p=1
-        else:
-            p=p * int(S[index])
-    else:
-        str_ = str_ + S[index]
-        
-    index= index +1
-    
-S= S[0:len(S)-1]
 '''
+# Solution from leetcode suggestions
+class Solution(object):
+    def decodeAtIndex(self, S, K):
+        """
+        :type S: str
+        :type K: int
+        :rtype: str
+        """
+        
+        length=0
+        for char in S:
+            if char.isdigit():
+                length = length * int(char)
+            else:
+                length = length + 1
+                
+                
+        for char in reversed(S):
+            K = K % length
+            if K==0 and char.isalpha():
+                return char
+            
+            if char.isdigit():
+                length = length/int(char)
+            else: 
+                length = length -1
+                '''
+       
