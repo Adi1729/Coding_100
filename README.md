@@ -2,16 +2,15 @@
 
 This is an exercise to practice  100 different coding problems from easy to intermediate level.
 
-Data Structure and Data Types Covered: 
+## Data Structure and Data Types Covered: 
 1. List
 2. String
 3. [Graphs](https://www.python-course.eu/graphs_python.php)
 4. [DFS and BFS](https://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/)
-
-          . [DFS ALgorithm](https://www.youtube.com/watch?v=tlPuVe5Otio) 
-      . DFS Code
-      . BFS Algorithm 
-      . BFS Code
+* [DFS ALgorithm](https://www.youtube.com/watch?v=tlPuVe5Otio) 
+* [DFS Code](https://www.youtube.com/watch?v=QVcsSaGeSH0&t=30s)
+* BFS Algorithm
+* BFS Code
 
 Language used : _Python_
 
