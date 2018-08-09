@@ -6,6 +6,7 @@ Data Structure and Data Types Covered:
 1. List
 2. String
 3. [Graphs](https://www.python-course.eu/graphs_python.php)
+4. [DFS and BFS](https://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/)
 
 Language used : _Python_
 
