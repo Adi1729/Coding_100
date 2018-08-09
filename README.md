@@ -7,6 +7,10 @@ Data Structure and Data Types Covered:
 2. String
 3. [Graphs](https://www.python-course.eu/graphs_python.php)
 4. [DFS and BFS](https://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/)
+      . [DFS ALgorithm](https://www.youtube.com/watch?v=tlPuVe5Otio) 
+      . DFS Code
+      . BFS Algorithm 
+      . BFS Code
 
 Language used : _Python_
 
