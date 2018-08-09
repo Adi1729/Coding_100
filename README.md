@@ -5,7 +5,7 @@ This is an exercise to practice  100 different coding problems from easy to inte
 Data Structure and Data Types Covered: 
 1. List
 2. String
-3. Graphs
+3. [Graphs][https://www.python.org/doc/essays/graphs/]
 
 Language used : _Python_
 
