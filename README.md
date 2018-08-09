@@ -2,6 +2,10 @@
 
 This is an exercise to practice  100 different coding problems from easy to intermediate level.
 
+Data Structure and Data Types Covered: 
+1. List
+2. String
+
 Language used : _Python_
 
 Algorithms covered :
