@@ -22,7 +22,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 prices= [7,1,5,3,6,4]
 prices= [1,2,3,4,5]
 prices = [7,6,4,3,1]
-
+prices =[10, 22, 5, 75, 65, 80]
 peak = prices[0]
 valley = prices[0]
 i=1
