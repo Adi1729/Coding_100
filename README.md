@@ -15,7 +15,7 @@ This is an exercise to practice  100 different coding problems from easy to inte
 Language used : _Python_
 
 Algorithms covered :
-1. DP
+1. [DP](https://blog.usejournal.com/top-50-dynamic-programming-practice-problems-4208fed71aa3)
 2. Pigeonhole
 3. Directed Acyclic Graph
 
