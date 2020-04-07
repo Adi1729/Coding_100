@@ -54,7 +54,7 @@ def isMatch_DP_with_recursion(pattern,string,p_start, s_start,dp):
 
     '''
     --------------------
-    parameters :
+    Parameters :
     --------------------
 
      pattern: pattern
@@ -104,7 +104,79 @@ def isMatch_DP_with_recursion(pattern,string,p_start, s_start,dp):
         dp[(p_start,s_start)]=False
         return False
 
-print(isMatch_DP_with_recursion('*a','caa',0,0,{}))
-print(isMatch_DP_with_recursion('?a','caa',0,0,{}))
-print(isMatch_DP_with_recursion('*a','caa',0,0,{}))
-print(isMatch_DP_with_recursion('*a','caa',0,0,{}))
+#print(isMatch_DP_with_recursion('*a','caa',0,0,{}))
+#print(isMatch_DP_with_recursion('?a','caa',0,0,{}))
+#print(isMatch_DP_with_recursion('*a','caa',0,0,{}))
+#print(isMatch_DP_with_recursion('*a','caa',0,0,{}))
+
+
+# Method 3 : Dynamic Programming with iteration/tabulation
+        
+def isMatch_DP_with_tabulation(p,s):
+    
+    '''
+    -------------
+    parameters:
+    -------------
+    
+    p : pattern
+    s : string
+    
+    source : https://www.youtube.com/watch?v=3ZDZ-N0EPV0
+    
+    '''
+        
+    
+    n = len(s) # string length
+    m = len(p) # pattern length
+    
+    dp = [0] * (n+1)
+    
+    for i in range(n+1):
+        dp[i] = [0] * (m+1)
+    
+    '''
+      ------------------
+       pattern  - columns
+       string  - rows
+    '''
+    
+    # filling 0th row of pattern:
+    dp[0][0] = True
+    
+    for i in range(1,m+1):
+        dp[0][i] = p[i-1]=='*'
+        
+  #
+  #      or initialize using below logic 
+  #  for i in range(1,m+1):
+   #       if p[i-1] == '*' :
+                  #dp[0][i] = dp[0][i-1]
+
+        
+        
+    # filling 0th columns of string:
+    for i in range(1,n+1): 
+        dp[i][0] = False
+        
+    for i in range (1,n+1):
+        for j in range(1,m+1):
+            if p[j-1] == s[i-1] or p[j-1]=='?' :
+                dp[i][j] = dp[i-1][j-1]
+            elif p[j-1] == '*':
+                dp[i][j] = dp[i][j-1] or dp[i-1][j]
+            elif p[j-1] != s[i-1]:
+                dp[i][j] = False
+                
+    return dp[i][j]
+    
+
+p = '*a'
+s = 'caa'     
+print(isMatch_DP_with_tabulation('*a','caa'))
+print(isMatch_DP_with_tabulation('?aa','caa'))
+print(isMatch_DP_with_tabulation('*a','caa'))
+print(isMatch_DP_with_tabulation('*a','cba'))
+print(isMatch_DP_with_tabulation('*?a','cba'))
+    
+    
